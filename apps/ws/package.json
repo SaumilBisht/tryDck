@@ -1,19 +1,15 @@
 {
-  "name": "db",
+  "name": "ws",
   "module": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
-  "exports": {
-    "./client": "./index.ts"
+  "dependencies": {
+    "db": "*"
   },
   "peerDependencies": {
     "typescript": "^5"
-  },
-  "dependencies": {
-    "@prisma/client": "^6.10.1",
-    "prisma": "^6.10.1"
   }
 }
