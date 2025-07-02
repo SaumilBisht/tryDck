@@ -22,7 +22,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile.be
           push: true
-          tags: project-be:${{ github.sha }}
+          tags: saumilbisht/project-be:${{ github.sha }}
 
       #Deploy to VM
 
