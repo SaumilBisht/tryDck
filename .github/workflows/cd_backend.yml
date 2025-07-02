@@ -1,6 +1,4 @@
-# Build the image
-# Push to dockerhub
-# ssh into vm and start new image
+
 name: Deploy the Backend
 on:
   push:
