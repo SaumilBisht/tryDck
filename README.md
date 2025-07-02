@@ -77,7 +77,14 @@ docker run -d \
   -p 8081:8081 \
   my-ws
 
+* For migrating database:
+  - docker exec -it frontend sh
+  - cd packages/db
+  - bunx prisma migrate dev --name init
 
-for frontend still need to migrate dev.
-backend still prisma 
+  (exit to move out)
+
+* To remove all container:
+    docker rm $(docker ps -aq)
+
 
