@@ -25,7 +25,15 @@ STEP 1: CLONE REPO
 
 STEP 2:Build and start all services:
 
-  docker compose up --build
+  docker compose up -d --build
+
+STEP 3: MIGRATE DB
+  docker ps
+
+  docker exec -it frontend sh       //frontend=name of frontend container
+  cd packages/db  
+  bunx prisma migrate dev --name init
+  exit
 
 
 IF, Stop the app:

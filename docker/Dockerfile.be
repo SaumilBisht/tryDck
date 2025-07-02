@@ -7,13 +7,15 @@ RUN apt-get update -y && apt-get install -y openssl
 
 COPY ./package.json ./package.json
 COPY ./turbo.json ./turbo.json
-COPY ./packages ./packages
-COPY ./bun.lock ./bun.lock
-COPY ./apps/backend ./apps/backend
 
-COPY . .
+COPY ./bun.lock ./bun.lock
 
 RUN bun install
+
+COPY ./packages ./packages
+COPY ./apps/backend ./apps/backend
+COPY . .
+
 RUN bun run db:generate
 
 EXPOSE 8080
