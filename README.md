@@ -15,8 +15,7 @@ Everything is containerized using **Docker Compose**, so setup is simple and fas
 
 ### 📦 Prerequisites
 
-- [Docker](https://www.docker.com/products/docker-desktop) installed
-- Docker Compose (comes with Docker Desktop)
+- DOCKER + DOCKER COMPOSE
 
 ### DOCKER COMPOSE
 
@@ -85,6 +84,7 @@ docker run -d \
   (exit to move out)
 
 * To remove all container:
+    docker stop $(docker ps -q)
     docker rm $(docker ps -aq)
 
 

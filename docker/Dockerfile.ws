@@ -10,6 +10,8 @@ COPY ./apps/ws ./apps/ws
 
 COPY . .
 
+RUN apt-get update -y && apt-get install -y openssl
+
 RUN bun install
 RUN bun run db:generate
 
