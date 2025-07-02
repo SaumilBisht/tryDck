@@ -1,4 +1,3 @@
-
 name: Deploy the Backend
 on:
   push:
@@ -7,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Clone code
         uses: actions/checkout@v2
