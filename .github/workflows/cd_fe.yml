@@ -22,7 +22,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile.fe
           build-args: 
-            - DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            DATABASE_URL: ${{ secrets.DATABASE_URL }}
           push: true
           tags: saumilbisht/project-frontend:${{ github.sha }}
 
